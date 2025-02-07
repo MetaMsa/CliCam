@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.5)
+project( CLICAM )
+find_package( OpenCV REQUIRED PATHS "C:/OpenCV/build/install" )
+add_executable( CLICAM main.cpp )
+target_include_directories( CLICAM PUBLIC ${OpenCV_INCLUDE_DIRS} )
+target_link_libraries( CLICAM ${OpenCV_LIBS} )
